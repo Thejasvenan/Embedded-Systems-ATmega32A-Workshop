@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega32"</DEVICE>
+ <WORKING_DIR>D:\Assignment\220638J_ME2261\Day 6\pro4\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Assignment\220638J_ME2261\Day 6\pro4\pro4.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m32def.inc</FILE>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\M32DEF.INC</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Assignment\220638J_ME2261\Day 6\pro4\Debug/pro4.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>pro4.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>pro4.map</FILE>
+  <FILE>pro4.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <begin><FILE>D:\Assignment\220638J_ME2261\Day 6\pro4\pro4.asm</FILE><LINE>4</LINE></begin>
+  <end><FILE>D:\Assignment\220638J_ME2261\Day 6\pro4\pro4.asm</FILE><LINE>10</LINE></end>
+ </LABELS>
+</ASSEMBLER_INFO>

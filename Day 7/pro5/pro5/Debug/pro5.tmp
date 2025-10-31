@@ -1,0 +1,31 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega32A"</DEVICE>
+ <WORKING_DIR>D:\Assignment\220638J_ME2261\Day 7\pro5\pro5\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Assignment\220638J_ME2261\Day 7\pro5\pro5\pro5.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m32Adef.inc</FILE>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\M32ADEF.INC</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Assignment\220638J_ME2261\Day 7\pro5\pro5\Debug/pro5.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>pro5.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>pro5.map</FILE>
+  <FILE>pro5.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <begin><FILE>D:\Assignment\220638J_ME2261\Day 7\pro5\pro5\pro5.asm</FILE><LINE>4</LINE></begin>
+  <loop><FILE>D:\Assignment\220638J_ME2261\Day 7\pro5\pro5\pro5.asm</FILE><LINE>8</LINE></loop>
+  <loop1><FILE>D:\Assignment\220638J_ME2261\Day 7\pro5\pro5\pro5.asm</FILE><LINE>11</LINE></loop1>
+  <loop2><FILE>D:\Assignment\220638J_ME2261\Day 7\pro5\pro5\pro5.asm</FILE><LINE>19</LINE></loop2>
+  <END><FILE>D:\Assignment\220638J_ME2261\Day 7\pro5\pro5\pro5.asm</FILE><LINE>26</LINE></END>
+ </LABELS>
+</ASSEMBLER_INFO>

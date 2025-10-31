@@ -1,0 +1,10 @@
+.INCLUDE "M32DEF.INC"
+.org $00
+
+begin:
+LDI R25, $A0
+LDI R26, $44
+MUL R25, R26
+MOV R31, R1
+MOV R30, R0
+end:NOP

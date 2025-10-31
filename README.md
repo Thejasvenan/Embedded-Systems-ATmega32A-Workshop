@@ -18,20 +18,20 @@ This repo documents my 14-day journey of learning and implementing **Microcontro
 
 | Day | Topic | Description | Folder |
 |-----|--------|--------------|--------|
-| 01 | Introduction to Atmega32A | Basic I/O Ports, DDRx, PINx, and PORTx registers | [/Day01_Basics](./Day 1) |
-| 02 | LED Blink in Assembly | Writing, assembling, and simulating your first LED blink | [/Day02_LED_Assembly](./Day 2) |
+| 01 | Introduction to Atmega32A | Basic I/O Ports, DDRx, PINx, and PORTx registers | [/Day01_Basics](./Day%201) |
+| 02 | LED Blink in Assembly | Writing, assembling, and simulating your first LED blink | [/Day02_LED_Assembly](./Day%202) |
 | 03 | LED Blink in C | Same project in Embedded C using Atmel Studio | [/Day03_LED_C](./Day%203) |
-| 04 | Switch Interfacing | Digital input handling and debouncing | [/Day04_Switch_Input](./Day 4) |
-| 05 | 7-Segment Display | Displaying digits with port manipulation | [/Day05_7Segment](./Day 5) |
-| 06 | LCD Display | Sending commands and data to 16x2 LCD | [/Day06_LCD_Display](./Day06_LCD_Display) |
-| 07 | ADC Basics | Analog-to-Digital conversion with potentiometer input | [/Day07_ADC](./Day 7) |
-| 08 | Temperature Sensor | Reading LM35 data through ADC | [/Day08_Temperature_Sensor](./Day 8) |
-| 09 | PWM Signal | Controlling brightness or motor speed using PWM | [/Day09_PWM](./Day 9) |
-| 10 | UART Communication | Serial communication between PC and ATmega32A | [/Day10_UART](./Day 10) |
-| 11 | Interrupts | External and Timer interrupts usage | [/Day11_Interrupts](./Day 11) |
-| 12 | Timer | Using timers for delay and event control | [/Day12_Timers](./Day 12) |
-| 13 | Motor Control | DC motor control via driver IC (L293D) | [/Day13_Motor_Control](./Day 13) |
-| 14 | Final Project | Sensor-based automation or integration of multiple modules | [/Day14_Final_Project](./Day 14) |
+| 04 | Switch Interfacing | Digital input handling and debouncing | [/Day04_Switch_Input](./Day%204) |
+| 05 | 7-Segment Display | Displaying digits with port manipulation | [/Day05_7Segment](./Day%205) |
+| 06 | LCD Display | Sending commands and data to 16x2 LCD | [/Day06_LCD_Display](./Day%206) |
+| 07 | ADC Basics | Analog-to-Digital conversion with potentiometer input | [/Day07_ADC](./Day%207) |
+| 08 | Temperature Sensor | Reading LM35 data through ADC | [/Day08_Temperature_Sensor](./Day%208) |
+| 09 | PWM Signal | Controlling brightness or motor speed using PWM | [/Day09_PWM](./Day%209) |
+| 10 | UART Communication | Serial communication between PC and ATmega32A | [/Day10_UART](./Day%2010) |
+| 11 | Interrupts | External and Timer interrupts usage | [/Day11_Interrupts](./Day%2011) |
+| 12 | Timer | Using timers for delay and event control | [/Day12_Timers](./Day%2012) |
+| 13 | Motor Control | DC motor control via driver IC (L293D) | [/Day13_Motor_Control](./Day%2013) |
+| 14 | Final Project | Sensor-based automation or integration of multiple modules | [/Day14_Final_Project](./Day%2014) |
 
 ---
 

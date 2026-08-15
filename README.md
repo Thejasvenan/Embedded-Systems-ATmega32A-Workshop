@@ -1,7 +1,7 @@
-# 🧠 Embedded Systems Workshop — ATmega32A (14 Days)
+# 🧠 Embedded Systems Workshop — ATmega32A (15 Days)
 
 Welcome to my **Embedded Systems Workshop Repository**!  
-This repo documents my 14-day journey of learning and implementing **Microcontroller Programming** using the **ATmega32A** in both **Assembly** and **C language**, along with **Proteus simulations** and **hardware interfacing**. ⚙️💡
+This repo documents my 15-day journey of learning and implementing **Microcontroller Programming** using the **ATmega32A** in both **Assembly** and **C language**, along with **Proteus simulations** and **hardware interfacing**. ⚙️💡
 
 ---
 
@@ -31,7 +31,8 @@ This repo documents my 14-day journey of learning and implementing **Microcontro
 | 11 | Interrupts | External and Timer interrupts usage | [/Day11_Interrupts](./Day%2011) |
 | 12 | Timer | Using timers for delay and event control | [/Day12_Timers](./Day%2012) |
 | 13 | Motor Control | DC motor control via driver IC (L293D) | [/Day13_Motor_Control](./Day%2013) |
-| 14 | Final Project | Sensor-based automation or integration of multiple modules | [/Day14_Final_Project](./Day%2014) |
+| 14 | Timer Interrupt Applications | LED toggling, signal generation, and user‑controlled duty cycles using Timer0 interrupts | [/Day14_Timer_Appl](./Day%2014) |
+| 15 | Mini Project – Automatic Gate Control | Servo‑based gate automation with USART communication, LCD display, countdown timer, and LED indicators | [/Day15_Mini_Project](./Day%2015) |
 
 ---
 

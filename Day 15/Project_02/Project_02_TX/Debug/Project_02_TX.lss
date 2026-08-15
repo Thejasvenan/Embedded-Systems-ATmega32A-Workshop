@@ -1,0 +1,225 @@
+
+Project_02_TX.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000126  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000000c  00800060  00000126  0000019a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  000001a6  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000001d8  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000048  00000000  00000000  00000214  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000646  00000000  00000000  0000025c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000058c  00000000  00000000  000008a2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000275  00000000  00000000  00000e2e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000c8  00000000  00000000  000010a4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000358  00000000  00000000  0000116c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000122  00000000  00000000  000014c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000038  00000000  00000000  000015e6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+   8:	0c 94 5a 00 	jmp	0xb4	; 0xb4 <__vector_2>
+   c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  10:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  14:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  18:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  1c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  20:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  24:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  28:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  2c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  30:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  34:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  38:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  3c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  40:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  44:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  48:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  4c:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+  50:	0c 94 3f 00 	jmp	0x7e	; 0x7e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	e6 e2       	ldi	r30, 0x26	; 38
+  68:	f1 e0       	ldi	r31, 0x01	; 1
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	ac 36       	cpi	r26, 0x6C	; 108
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+  76:	0e 94 8b 00 	call	0x116	; 0x116 <main>
+  7a:	0c 94 91 00 	jmp	0x122	; 0x122 <_exit>
+
+0000007e <__bad_interrupt>:
+  7e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000082 <USART_init>:
+#include <avr/interrupt.h>
+#include <util/delay.h>
+
+void USART_init()
+{
+	UBRRH = 0;
+  82:	10 bc       	out	0x20, r1	; 32
+	UBRRL = 51;                      // 9600 baud @ 8MHz
+  84:	83 e3       	ldi	r24, 0x33	; 51
+  86:	89 b9       	out	0x09, r24	; 9
+	UCSRB = (1<<TXEN);               // Enable transmitter
+  88:	88 e0       	ldi	r24, 0x08	; 8
+  8a:	8a b9       	out	0x0a, r24	; 10
+	UCSRC = (1<<URSEL) | (1<<UCSZ1) | (1<<UCSZ0); // 8-bit
+  8c:	86 e8       	ldi	r24, 0x86	; 134
+  8e:	80 bd       	out	0x20, r24	; 32
+  90:	08 95       	ret
+
+00000092 <USART_send>:
+}
+
+void USART_send(char data)
+{
+	while (!(UCSRA & (1<<UDRE)));  // Wait until buffer empty
+  92:	5d 9b       	sbis	0x0b, 5	; 11
+  94:	fe cf       	rjmp	.-4      	; 0x92 <USART_send>
+	UDR = data;
+  96:	8c b9       	out	0x0c, r24	; 12
+  98:	08 95       	ret
+
+0000009a <USART_send_string>:
+}
+
+void USART_send_string(char *str)
+{
+  9a:	cf 93       	push	r28
+  9c:	df 93       	push	r29
+  9e:	ec 01       	movw	r28, r24
+	while (*str)
+  a0:	03 c0       	rjmp	.+6      	; 0xa8 <USART_send_string+0xe>
+	{
+		USART_send(*str++);
+  a2:	21 96       	adiw	r28, 0x01	; 1
+  a4:	0e 94 49 00 	call	0x92	; 0x92 <USART_send>
+	UDR = data;
+}
+
+void USART_send_string(char *str)
+{
+	while (*str)
+  a8:	88 81       	ld	r24, Y
+  aa:	81 11       	cpse	r24, r1
+  ac:	fa cf       	rjmp	.-12     	; 0xa2 <USART_send_string+0x8>
+	{
+		USART_send(*str++);
+	}
+}
+  ae:	df 91       	pop	r29
+  b0:	cf 91       	pop	r28
+  b2:	08 95       	ret
+
+000000b4 <__vector_2>:
+
+ISR(INT1_vect)
+{
+  b4:	1f 92       	push	r1
+  b6:	0f 92       	push	r0
+  b8:	0f b6       	in	r0, 0x3f	; 63
+  ba:	0f 92       	push	r0
+  bc:	11 24       	eor	r1, r1
+  be:	2f 93       	push	r18
+  c0:	3f 93       	push	r19
+  c2:	4f 93       	push	r20
+  c4:	5f 93       	push	r21
+  c6:	6f 93       	push	r22
+  c8:	7f 93       	push	r23
+  ca:	8f 93       	push	r24
+  cc:	9f 93       	push	r25
+  ce:	af 93       	push	r26
+  d0:	bf 93       	push	r27
+  d2:	ef 93       	push	r30
+  d4:	ff 93       	push	r31
+	USART_send_string("Open Gate\n");
+  d6:	80 e6       	ldi	r24, 0x60	; 96
+  d8:	90 e0       	ldi	r25, 0x00	; 0
+  da:	0e 94 4d 00 	call	0x9a	; 0x9a <USART_send_string>
+}
+  de:	ff 91       	pop	r31
+  e0:	ef 91       	pop	r30
+  e2:	bf 91       	pop	r27
+  e4:	af 91       	pop	r26
+  e6:	9f 91       	pop	r25
+  e8:	8f 91       	pop	r24
+  ea:	7f 91       	pop	r23
+  ec:	6f 91       	pop	r22
+  ee:	5f 91       	pop	r21
+  f0:	4f 91       	pop	r20
+  f2:	3f 91       	pop	r19
+  f4:	2f 91       	pop	r18
+  f6:	0f 90       	pop	r0
+  f8:	0f be       	out	0x3f, r0	; 63
+  fa:	0f 90       	pop	r0
+  fc:	1f 90       	pop	r1
+  fe:	18 95       	reti
+
+00000100 <INT1_init>:
+
+void INT1_init()
+{
+	MCUCR |= (1<<ISC11);    // Falling edge on INT1
+ 100:	85 b7       	in	r24, 0x35	; 53
+ 102:	88 60       	ori	r24, 0x08	; 8
+ 104:	85 bf       	out	0x35, r24	; 53
+	MCUCR &= ~(1<<ISC10);
+ 106:	85 b7       	in	r24, 0x35	; 53
+ 108:	8b 7f       	andi	r24, 0xFB	; 251
+ 10a:	85 bf       	out	0x35, r24	; 53
+	GICR |= (1<<INT1);      // Enable INT1 interrupt
+ 10c:	8b b7       	in	r24, 0x3b	; 59
+ 10e:	80 68       	ori	r24, 0x80	; 128
+ 110:	8b bf       	out	0x3b, r24	; 59
+	sei();
+ 112:	78 94       	sei
+ 114:	08 95       	ret
+
+00000116 <main>:
+}
+
+int main(void)
+{
+    USART_init();
+ 116:	0e 94 41 00 	call	0x82	; 0x82 <USART_init>
+    INT1_init();
+ 11a:	0e 94 80 00 	call	0x100	; 0x100 <INT1_init>
+    sei();  // Enable global interrupt	
+ 11e:	78 94       	sei
+ 120:	ff cf       	rjmp	.-2      	; 0x120 <main+0xa>
+
+00000122 <_exit>:
+ 122:	f8 94       	cli
+
+00000124 <__stop_program>:
+ 124:	ff cf       	rjmp	.-2      	; 0x124 <__stop_program>
